@@ -1,5 +1,5 @@
 # Найти сумму и произведение цифр трехзначного числа, которое вводит пользователь.
-# https://drive.google.com/file/d/1_hWWiDQgnp7z9pZPnKP7orOAnB9AbjJ3/view?usp=sharing
+# https://drive.google.com/file/d/1zjCdF5ZTABUqmMwkeLk06Lg9t-LYs9AC/view?usp=sharing
 
 num = int(input("Введите трехзначное число: "))
 
