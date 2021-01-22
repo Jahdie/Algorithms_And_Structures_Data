@@ -1,7 +1,7 @@
 # По длинам трех отрезков, введенных пользователем, определить возможность существования треугольника, составленного
 # из этих отрезков. Если такой треугольник существует, то определить, является ли он разносторонним, равнобедренным или
 # равносторонним.
-# https://drive.google.com/file/d/1GP9cHbUbZ7RlNkQRfLh3OxmpiKt0l8OT/view?usp=sharing
+# https://drive.google.com/file/d/1zjCdF5ZTABUqmMwkeLk06Lg9t-LYs9AC/view?usp=sharing
 
 line_1 = float(input('Введите длинну первого отрезка: '))
 line_2 = float(input('Введите длинну второго отрезка: '))
