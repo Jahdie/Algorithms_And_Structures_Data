@@ -3,7 +3,7 @@
 # Для каждого из трех случаев пользователь задает свои границы диапазона. Например, если надо получить случайный символ
 # от 'a' до 'f', то вводятся эти символы. Программа должна вывести на экран любой символ алфавита от 'a' до 'f'
 # включительно.
-# https://drive.google.com/file/d/1frKJm8NSgyiq5kCsUekDbg5Sqqa4lyGd/view?usp=sharing
+# https://drive.google.com/file/d/1zjCdF5ZTABUqmMwkeLk06Lg9t-LYs9AC/view?usp=sharing
 
 from random import randint, uniform
 
