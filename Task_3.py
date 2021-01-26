@@ -14,6 +14,7 @@ while True:
         digit_capacity += 1
     else:
         break
+while True:
     if digit_capacity != 0:
         num_temp = num % 10
         num = int(num // 10)
