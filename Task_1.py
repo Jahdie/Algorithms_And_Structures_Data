@@ -6,7 +6,6 @@
 Также она должна сообщать пользователю о невозможности деления на ноль, если он ввел его в качестве делителя.
 """
 # https://drive.google.com/file/d/1X1OdbquAMqPDjb83byzE2HPYRrLHM3fC/view?usp=sharing
-operation_symbol = ''
 
 while True:
     operation_symbol = str(input("Введите знак опреации +, -, *, / или 0 если хотите завершить программу: "))
