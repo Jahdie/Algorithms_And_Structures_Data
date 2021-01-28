@@ -8,6 +8,7 @@ MIN_ITEM = -100
 MAX_ITEM = 100
 
 array = [randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE)]
+array = [2, 3, 4, 5, -6, 7, 8]
 print(array)
 max_negative_num = []
 negative_array = []
@@ -20,4 +21,7 @@ for list_index_value in enumerate(array):
         if negative_array[i][1] > max_negative_num[1]:
             max_negative_num = negative_array[i]
 
-print(f"Максимальное отрицательное число {max_negative_num[1]} и имеет {max_negative_num[0]} индекс.")
+if len(negative_array) > 0:
+    print(f"Максимальное отрицательное число {max_negative_num[1]} и имеет {max_negative_num[0]} индекс ")
+else:
+    print("В массиве нет отрицательных чисел!")
