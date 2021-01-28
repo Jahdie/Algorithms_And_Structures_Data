@@ -8,7 +8,7 @@ MIN_ITEM = -100
 MAX_ITEM = 100
 
 array = [randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE)]
-array = [2, 3, 4, 5, -6, 7, 8]
+
 print(array)
 max_negative_num = []
 negative_array = []
