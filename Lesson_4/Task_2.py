@@ -21,13 +21,11 @@
 from timeit import timeit
 from cProfile import run
 
-RANGE_BETWEEN_PRIME_NUMBERS = 13
-
 
 def sieve(index_prime_num: int) -> int:
-    assert index_prime_num <= 78498, 'Номер простого числа не может быть больше 78498'
-
-    n = index_prime_num * RANGE_BETWEEN_PRIME_NUMBERS
+    assert index_prime_num <= 78_498, 'Номер простого числа не может быть больше 78498'
+    range_between_prime_numbers = 13
+    n = index_prime_num * range_between_prime_numbers
     prime_num = 0
     array = [el for el in range(n)]
     array[1] = 0
@@ -73,14 +71,16 @@ print(timeit('sieve(5_000)', number=100, globals=globals()))  # 4.5394349
 print(timeit('sieve(50_000)', number=100, globals=globals()))  # 54.5439442
 run('sieve(5000)')
 
-# ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-#     1    0.000    0.000    0.040    0.040 <string>:1(<module>)
-#     1    0.036    0.036    0.039    0.039 Task_2.py:27(sieve)
-#     1    0.003    0.003    0.003    0.003 Task_2.py:32(<listcomp>)
-#     1    0.000    0.000    0.040    0.040 {built-in method builtins.exec}
-#     1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+"""
+ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    1    0.000    0.000    0.040    0.040 <string>:1(<module>)
+    1    0.036    0.036    0.039    0.039 Task_2.py:27(sieve)
+    1    0.003    0.003    0.003    0.003 Task_2.py:32(<listcomp>)
+    1    0.000    0.000    0.040    0.040 {built-in method builtins.exec}
+    1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+"""
 
-# **************************************************************************************************************
+# **********************************************************************************************************************
 
 print(timeit('prime(5)', number=100, globals=globals()))  # 0.0005183999999999953
 print(timeit('prime(50)', number=100, globals=globals()))  # 0.0225329
@@ -89,8 +89,17 @@ print(timeit('prime(5_000)', number=100, globals=globals()))  # 0.84803679999999
 print(timeit('prime(50_000)', number=100, globals=globals()))  # 28.9086542
 run('prime(5000)')
 
-# ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-#     1    0.000    0.000    0.288    0.288 <string>:1(<module>)
-#     1    0.288    0.288    0.288    0.288 Task_2.py:52(prime)
-#     1    0.000    0.000    0.288    0.288 {built-in method builtins.exec}
-#     1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+"""
+ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    1    0.000    0.000    0.288    0.288 <string>:1(<module>)
+    1    0.288    0.288    0.288    0.288 Task_2.py:52(prime)
+    1    0.000    0.000    0.288    0.288 {built-in method builtins.exec}
+    1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+"""
+
+# **********************************************************************************************************************
+"""
+Оба алгоритма имеют линейную сложность. Для первого алгоритма необходимо генерировать список,
+который накладывает ограничения глубины поиска простого числа. Для второго - таких ограничений нет, он универсальней и 
+заметно быстрее. 
+"""
